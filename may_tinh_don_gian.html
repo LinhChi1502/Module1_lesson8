@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính Đơn Giản</title>
+    <style>
+        body {
+            border: 1px solid black;
+            width: 18%;
+            border-width: medium;
+            margin-left: 400px;
+        }
+
+        table {
+            margin-left: 18px;
+        }
+
+        button {
+            width: 40px;
+            height: 40px;
+            color: blue;
+        }
+
+        input {
+            width: 200px;
+            height: 25px;
+            color: blue;
+            margin: 0px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="result"></td>
+
+    </tr>
+    <tr>
+        <td>
+            <button value="1" onclick="result.value += 1">1</button>
+        </td>
+        <td>
+            <button value="2" onclick="result.value += 2">2</button>
+        </td>
+        <td>
+            <button value="3" onclick="result.value += 3">3</button>
+        </td>
+        <td>
+            <button value="+" onclick="result.value += '+'">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button value="4" onclick="result.value += 4">4</button>
+        </td>
+        <td>
+            <button value="5" onclick="result.value += 5">5</button>
+        </td>
+        <td>
+            <button value="6" onclick="result.value += 6">6</button>
+        </td>
+        <td>
+            <button value="-" onclick="result.value += '-'">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button value="7" onclick="result.value += 7">7</button>
+        </td>
+        <td>
+            <button value="8" onclick="result.value += 8">8</button>
+        </td>
+        <td>
+            <button value="9" onclick="result.value += 9">9</button>
+        </td>
+        <td>
+            <button value="*" onclick="result.value += '*'">*</button>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <button value="C" type="reset" onclick="">C</button>
+        </td>
+        <td>
+            <button value="0" onclick="result.value += 0">0</button>
+        </td>
+        <td>
+            <button value="=" onclick="result.value = eval(result.value)">=</button>
+        </td>
+        <td>
+            <button value="/" onclick="result.value += '/'">/</button>
+        </td>
+    </tr>
+</table>
+
+<script>
+
+</script>
+</body>
+</html>

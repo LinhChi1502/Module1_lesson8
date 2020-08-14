@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+    <style>
+        img {
+            display: block;
+            margin: 1em;
+            padding: 0.2em;
+            box-shadow: 2px 3px 3px black;
+            width: 600px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="backgroundcolor">
+    <img src="images/funny-cat1_part1x1.jpg" id="1" name="meo" onclick="changeImage(this,this.id)">
+    <img src="images/monkey_part2x1.jpg" id="2" name="khi" onclick="changeImage(this,this.id)">
+    <img src="images/panda_swap_part3x1.jpg" id="3" name="gau" onclick="changeImage(this,this.id)">
+    <img src="images/funny-cat1_part4x1.jpg" id="4" name="meo" onclick="changeImage(this,this.id)">
+    <img src="images/panda_swap_part5x1.jpg" id="5" name="gau" onclick="changeImage(this,this.id)">
+</div>
+<script>
+    let bgcolor = document.getElementById("backgroundcolor");
+
+    function changeImage(image, imageId) {
+        if (image.name == "meo") {
+            image.src = "images/monkey_part" + imageId + "x1.jpg";
+            image.name = "khi";
+            winner(bgcolor);
+        } else if (image.name == "khi") {
+            image.src = "images/panda_swap_part" + imageId + "x1.jpg";
+            image.name = "gau";
+            winner(bgcolor);
+        } else if (image.name == "gau") {
+            image.src = "images/funny-cat1_part" + imageId + "x1.jpg";
+            image.name = "meo";
+            winner(bgcolor);
+        }
+    }
+
+    function winner(color) {
+        if (document.getElementById("1").name == document.getElementById("2").name) {
+            if (document.getElementById("2").name == document.getElementById("3").name) {
+                if (document.getElementById("3").name == document.getElementById("4").name) {
+                    if (document.getElementById("4").name == document.getElementById("5").name) {
+                        color.style.backgroundColor = "red";
+                    }
+                }
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>
