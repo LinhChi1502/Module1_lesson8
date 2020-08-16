@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích tam giác vuông</title>
+</head>
+<body>
+Nhập cạnh kề a:
+<input type="text" id="canhkea"> <br><br>
+Nhập cạnh kề b:
+<input type="text" id="canhkeb"> <br><br>
+<button id="tinh" onclick="calculate()">Tính</button>
+<p id="result"></p>
+<script>
+    function calculate() {
+    let a = parseFloat(document.getElementById("canhkea").value);
+    let b = parseFloat(document.getElementById("canhkeb").value);
+    if (a<=0||b<=0) {
+        alert("các cạnh của hình tam giác phải lớn hơn 0");
+    } else {
+        let dientich = 1/2*a*b;
+        document.getElementById("result").innerHTML = "Diện tích hình tam giác là " + dientich;
+    }
+    }
+</script>
+
+
+</body>
+</html>

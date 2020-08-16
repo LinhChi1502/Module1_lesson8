@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Celsius To Faraheit</title>
+</head>
+<body>
+<input type="text" id="userinput" value="">
+<p>Bạn muốn chuyển sang: </p>
+<select id="index">
+    <option value="C">Celsius</option>
+    <option value="F">Faraheit</option>
+</select>
+<br>
+<br>
+<button onclick="changetemp()">Convert</button>
+<br>
+<p id="content"></p>
+
+<script>
+
+    function changetemp() {
+        let userIP = parseFloat(document.getElementById("userinput").value);
+        let result;
+        let valuetemp = document.getElementById("index").value;
+        switch (valuetemp) {
+            case "C":
+                result = (5 / 9) * (userIP - 32);
+            case "F":
+                result = (9 / 5) * userIP + 32;
+        }
+        document.getElementById("content").innerHTML = "Kết quả là " + result;
+    }
+
+</script>
+</body>
+</html>

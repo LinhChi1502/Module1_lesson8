@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone Fee</title>
+</head>
+<body>
+<script>
+    const thuebao = 25;
+    let min = parseInt(prompt("Nhập số phút đã gọi: "));
+    let fee;
+    if (min<=50) {
+        fee = min *600;
+    } else if (min<=200) {
+        fee = 50*600+(min-50)*400;
+    } else {
+        fee = 50*600+150*400+(min-200)*200;
+    }
+    let total = thuebao+fee;
+    alert("Số tiền phải trả là "+total);
+</script>
+</body>
+</html>

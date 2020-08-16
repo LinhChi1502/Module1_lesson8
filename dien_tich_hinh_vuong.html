@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình vuông</title>
+</head>
+<body>
+Nhập cạnh a:
+<input type="text" id="canha">
+<br>
+<br>
+<button id="tinh" onclick="calculate()">Tính</button>
+<br>
+<p id="result"></p>
+<script>
+    function calculate() {
+        let a = parseFloat(document.getElementById("canha").value);
+        if (a <= 0) {
+            alert("Cạnh a phải lớn hơn 0");
+        } else {
+            let dientich = a * a;
+            document.getElementById("result").innerHTML = "Diện tích hình vuông là " + dientich;
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Clarify</title>
+</head>
+<body>
+<script>
+    let diembaiTK = parseFloat(prompt("Nhập điểm bài kiểm tra: "));
+    let diemGK = parseFloat(prompt("Nhập điểm bài thi giữa kỳ: "));
+    let diemCK = parseFloat(prompt("Nhập điểm bài thi cuối kỳ: "));
+    let diemTB = (diembaiTK+diemGK+diemCK)/3;
+    (diemTB >= 9)? alert("Loại A"):
+        (diemTB>=7)? alert("Loại B"):
+            (diemTB>=5)? alert("Loại C"):
+                alert("Loại F")
+</script>
+</body>
+</html>

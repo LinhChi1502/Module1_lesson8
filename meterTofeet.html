@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meter To Feet</title>
+</head>
+<body>
+<input type="text" id="userinput" value="">
+<p>Bạn muốn chuyển sang: </p>
+<select id="index">
+    <option value="meter">Meter</option>
+    <option value="feet">Feet</option>
+</select>
+<br>
+<br>
+<button onclick="change()">Convert</button>
+<br>
+<p id="content"></p>
+
+<script>
+
+    function change() {
+        let userIP = parseFloat(document.getElementById("userinput").value);
+        let result;
+        let index = document.getElementById("index").value;
+        switch (index) {
+            case "meter":
+                result = userIP/3.2808;
+            case "feet":
+                result = userIP*3.2808;
+        }
+        document.getElementById("content").innerHTML = "Kết quả là " + result;
+    }
+
+</script>
+</body>
+</html>

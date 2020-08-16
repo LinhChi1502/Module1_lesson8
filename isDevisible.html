@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Is Devisible</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập a: "));
+    let b = parseInt(prompt("Nhập b: "));
+    if (b == 0) {
+        alert("b phải khác 0");
+    } else {
+        let isDevisible = a % b == 0;
+        switch (isDevisible) {
+            case true:
+                alert("a chia hết cho b");
+            case false:
+                alert("a không chia hết cho b");
+        }
+    }
+</script>
+</body>
+</html>

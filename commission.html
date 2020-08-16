@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Commission</title>
+</head>
+<body>
+<script>
+    let doanhthu = parseInt(prompt("Nhập doanh thu: "));
+    let rate;
+    if (doanhthu <= 100000000) {
+        rate = 0.05;
+    } else if (doanhthu <= 300000000) {
+        rate = 0.1
+    } else {
+        rate = 0.2
+    }
+let com = doanhthu*rate;
+    alert("Số tiền hoa hồng là "+com);
+</script>
+</body>
+</html>

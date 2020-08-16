@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Tiền Điện</title>
+</head>
+<body>
+<script>
+    let pre = parseFloat(prompt("Nhập vào chỉ số cũ: "));
+    let cur = parseFloat(prompt("Nhập vào chỉ số mới: "));
+    consume = cur-pre;
+    let bill;
+    if (consume<=100) {
+        bill = consume*1000;
+    } else if (consume<=150) {
+        bill = 100*1000 + (consume-100)*1200;
+    } else if (consume<=200) {
+        bill = 100*1000+50*1200+(consume-150)*2000;
+    } else {
+        bill = 100*1000+50*1200+50*2000+(consume-200)*2500;
+    }
+    alert("Số tiền điện phải trả là " + bill);
+</script>
+</body>
+</html>
